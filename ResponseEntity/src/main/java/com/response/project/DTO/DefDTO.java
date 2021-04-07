@@ -16,6 +16,6 @@ import lombok.Setter;
 public class DefDTO {
 
 	@NotBlank(message="빈값입니다.")
-	private String DefValue;
+	private String defCheckValue;
 	
 }

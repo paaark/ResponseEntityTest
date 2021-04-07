@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div>
-		<input type="text" name="DefValue" id="DefValue">
+		<input type="text" name="defCheckValue" id="defCheckValue">
 	</div>
 	<div>
 		<input type="button" onclick="checkDefValue();" value="확인하기">
@@ -18,18 +18,23 @@
 	
 	<script>
 		function checkDefValue(){
-			
 			fetch('/isDef',{
 				method : 'post',
-                headers : {
-                  "Content-type":"application/x-www-form-urlencoded;charset=UTF-8"
-                },
-                body : new URLSearchParams("DefValue="+$("#DefValue").val())
+				headers: {
+				    'Content-Type': 'application/json'
+				},
+                body : JSON.stringify({
+                	defValue: $('#defCheckValue').val()
+                })
 			}).then(res => {
-				console.log("res : " + res);
+				if(data.status == 200){
+					alert(data.message);
+				} 
 				return res.json();
 			}).then(data => {
-				console.log("data : " + data);
+				if(data.status != 200) {
+					alert(data.message);
+				}
 			}).catch(err => {
 				console.log("err : " + err);
 			});
