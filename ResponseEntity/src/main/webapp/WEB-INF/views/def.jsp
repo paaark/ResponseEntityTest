@@ -24,7 +24,7 @@
 				    'Content-Type': 'application/json'
 				},
                 body : JSON.stringify({
-                	defValue: $('#defCheckValue').val()
+                	"defCheckValue": $('#defCheckValue').val()
                 })
 			}).then(res => {
 				if(data.status == 200){

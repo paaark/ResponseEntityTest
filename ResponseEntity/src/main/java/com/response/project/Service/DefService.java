@@ -7,7 +7,7 @@ import com.response.project.DTO.MessageDTO;
 
 public interface DefService {
 	
-//	public ResponseEntity<MessageDTO> checkDefValue(DefDTO DefDTO);
-	public ResponseEntity<MessageDTO> checkDefValue(String defCheckValue);
+	public ResponseEntity<MessageDTO> checkDefValue(DefDTO DefDTO);
+//	public ResponseEntity<MessageDTO> checkDefValue(String defCheckValue);
 
 }

@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class DefDTO {
 
-	@NotBlank(message="ë¹ˆê°’ìž…ë‹ˆë‹¤.")
+	@NotBlank(message="ºó°ªÀÔ´Ï´Ù.")
 	private String defCheckValue;
 	
 }
